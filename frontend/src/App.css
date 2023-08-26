@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "lilia";
+  src: url("./assets/fonts/LilitaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/InterstateMonoRegular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,17 +21,36 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
+  font-family: "inter";
+  font-size: 1.1rem;
 }
 
 h1 {
+  font-weight: 500;
+  font-family: "lilia";
   text-align: center;
-  margin: 3rem 0;
+  margin: 2.5rem 0;
+  font-size: 3rem;
 }
 
-h3,
-h2 {
+.primaryTitle {
+  font-weight: 500;
+  font-family: "lilia";
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.secondaryTitle {
+  font-weight: 500;
+  font-family: "lilia";
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
 }
 
 .base {
@@ -35,13 +64,12 @@ h2 {
   margin: 0 auto;
   height: 80vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
 
 .primary {
-  border: #fff solid 1px;
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -51,11 +79,12 @@ h2 {
 .primaryPizza {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Crée deux colonnes de largeur égale */
-  gap: 1rem; /* Espacement entre les colonnes et les lignes */
+  gap: 2rem; /* Espacement entre les colonnes et les lignes */
+  padding-bottom: 4rem;
+  border-bottom: #fff solid 3px;
 }
 
 .secondary {
-  border: red solid 1px;
   display: flex;
   width: 95%;
   justify-content: space-between;
@@ -65,16 +94,19 @@ h2 {
 .secondaryPizza {
   display: flex;
   justify-content: space-between; /* Ceci va pousser les éléments aux extrémités opposées de l'espace disponible */
-  align-items: flex-start; /* Ceci aligne le haut des éléments */
+  align-items: center; /* Ceci aligne le haut des éléments */
   width: 100%; /* Ceci s'assure que le `.secondaryPizza` prend toute la largeur disponible */
 }
 
-.secondaryPizza > div,
-.secondaryPizza > p {
-  width: 48%; /* 100% divisé par 2, moins 2% pour un peu d'espacement entre les deux */
+.secondaryPizza > div {
+  width: 92%; /* 100% divisé par 2, moins 2% pour un peu d'espacement entre les deux */
+  padding: 0 1rem 0 2rem;
+  border-right: #fff solid 3px;
 }
 
 .secondaryPizza > p {
+  width: 6%; /* 100% divisé par 2, moins 2% pour un peu d'espacement entre les deux */
+  margin: 0 2rem;
   text-align: right; /* Pour aligner les prix à droite */
 }
 
