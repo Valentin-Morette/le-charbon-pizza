@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -10,6 +11,7 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
