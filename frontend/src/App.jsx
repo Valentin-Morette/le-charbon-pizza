@@ -1,11 +1,12 @@
 import "./App.css";
+import logo from "./assets/img/logo.png";
 
 function App() {
   return (
     <div className="App">
       <div className="title">
         <h1>Pizzeria le charbon</h1>
-        <img src="./src/assets/img/logo.png" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="base">
         <div className="primary">
