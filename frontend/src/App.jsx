@@ -34,7 +34,7 @@ function App() {
                   Sauce tomate, Mozzarella, Champignons, Poivron vert, Peppéroni
                 </p>
               </div>
-              <p>12.50€</p>
+              <p>19.50$</p>
             </div>
 
             <div className="secondaryPizza">
