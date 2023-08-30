@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <div className="title">
         <h1>Pizzeria le charbon</h1>
-        <img src="./src/assets/logo.png" alt="logo" className="logo" />
+        <img src="./assets/logo.png" alt="logo" className="logo" />
       </div>
       <div className="base">
         <div className="primary">
