@@ -3,7 +3,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Pizzeria le charbon</h1>
+      <div className="title">
+        <h1>Pizzeria le charbon</h1>
+        <img src="./src/assets/logo.png" alt="logo" className="logo" />
+      </div>
       <div className="base">
         <div className="primary">
           <h3 className="primaryTitle">Pizzas</h3>
