@@ -22,8 +22,8 @@ function App() {
 
             <div className="secondaryPizza">
               <div>
-                <h4 className="withp">Anchoix</h4>
-                <p>Sauce tomate, Mozzarella, Anchoix, Olives</p>
+                <h4 className="withp">Anchois</h4>
+                <p>Sauce tomate, Mozzarella, Anchois, Olive</p>
               </div>
               <p>18.50$</p>
             </div>
@@ -32,7 +32,7 @@ function App() {
               <div>
                 <h4 className="withp">Toute garnie</h4>
                 <p>
-                  Sauce tomate, Mozzarella, Champignons, Poivron vert, Peppéroni
+                  Sauce tomate, Mozzarella, Champignon, Poivron vert, Peppéroni
                 </p>
               </div>
               <p>19.50$</p>
@@ -42,7 +42,7 @@ function App() {
               <div>
                 <h4 className="withp">Américaines</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Oignons, Bacon, Jambon Blanc,
+                  Sauce Tomate, Mozzarella, Oignon, Bacon, Jambon Blanc,
                   Peppéroni
                 </p>
               </div>
@@ -54,7 +54,7 @@ function App() {
                 <h4 className="withp">4 Fromages</h4>
                 <p>
                   Sauce Tomate, Mozzarella, Emmental, Parmesan, Chèvre, Bleu,
-                  Olives
+                  Olive
                 </p>
               </div>
               <p>23.00$</p>
@@ -64,8 +64,8 @@ function App() {
               <div>
                 <h4 className="withp">Reine</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Champignons, Jambon Blanc, Parmesan,
-                  Olives
+                  Sauce Tomate, Mozzarella, Champignon, Jambon Blanc, Parmesan,
+                  Olive
                 </p>
               </div>
               <p>22.00$</p>
@@ -73,9 +73,9 @@ function App() {
 
             <div className="secondaryPizza">
               <div>
-                <h4 className="withp">Calzones</h4>
+                <h4 className="withp">Calzone</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Champignons, Jambon Blanc, Parmesan,
+                  Sauce Tomate, Mozzarella, Champignon, Jambon Blanc, Parmesan,
                   Oeuf
                 </p>
               </div>
@@ -86,8 +86,8 @@ function App() {
               <div>
                 <h4 className="withp">Végétarienne</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Oignons, Champignons, Poivron Vert,
-                  Artichaut, Olives
+                  Sauce Tomate, Mozzarella, Oignon, Champignon, Poivron Vert,
+                  Artichaut, Olive
                 </p>
               </div>
               <p>21.50$</p>
@@ -97,8 +97,8 @@ function App() {
               <div>
                 <h4 className="withp">Poulet</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Oignons, Champignons, Poulet,
-                  Parmesan, Olives
+                  Sauce Tomate, Mozzarella, Oignon, Champignon, Poulet,
+                  Parmesan, Olive
                 </p>
               </div>
               <p>22.00$</p>
@@ -108,8 +108,8 @@ function App() {
               <div>
                 <h4 className="withp">Chèvre Miel</h4>
                 <p>
-                  Sauce Tomate, Mozzarella, Oignons, Chèvre, Noix, Parmesan,
-                  Olives, Basilic
+                  Sauce Tomate, Mozzarella, Oignon, Chèvre, Noix, Parmesan,
+                  Olive, Basilic
                 </p>
               </div>
               <p>24.00$</p>
@@ -119,8 +119,8 @@ function App() {
               <div>
                 <h4 className="withp">Bambino</h4>
                 <p>
-                  Petite Pizza pour Enfant ou Petite Faim ( Toute Garnie ou Végé
-                  )
+                  Petite pizza pour enfant ou petite faim ( Toute Garnie ou
+                  Végétarienne )
                 </p>
               </div>
               <p>12.00$</p>
@@ -184,7 +184,8 @@ function App() {
                 <div>
                   <h4 className="withp">Salade Composée</h4>
                   <p>
-                    Salade, Légumes Composée, Huile Olives, Vinaigre Balsamique
+                    Salade, Champignon, Poivron vert, Oignon, Artichaut, Olive,
+                    Huile d'Olive, Vinaigre Balsamique
                   </p>
                 </div>
                 <p>13.00$</p>
@@ -193,8 +194,8 @@ function App() {
                 <div>
                   <h4 className="withp">Salade César</h4>
                   <p>
-                    Salade, Sauce César Fait Maison, Poulet, Parmesan, Oignons
-                    Cryspie, Croutons
+                    Salade, Poulet, Parmesan, Oignon cryspi, Croutons, Sauce
+                    césar faite maison
                   </p>
                 </div>
                 <p>14.50$</p>

@@ -189,11 +189,11 @@ h4 {
 
   .secondary {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
-  .secondary > .secondaryBloc:first-child {
+  .secondary > .secondaryBloc:nth-child(2) {
     padding-bottom: 4rem;
     border-bottom: #fff solid 3px;
   }
