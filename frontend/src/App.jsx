@@ -1,7 +1,53 @@
 import "./App.css";
+import { useState, useEffect } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import papa from "papaparse";
 import logo from "./assets/img/logo.png";
+import PizzaItem from "./components/PizzaItem";
 
 function App() {
+  const [infoPizza, setInfoPizza] = useState([]);
+  const [infoSalade, setInfoSalade] = useState([]);
+
+  const prepareData = (data, type) => {
+    const headers = data[0];
+    const rows = data.slice(1);
+    const json = rows.map((row) => {
+      const obj = {};
+      // eslint-disable-next-line no-return-assign
+      headers.forEach((key, j) => (obj[key] = row[j]));
+      return obj;
+    });
+    if (type === "pizza") setInfoPizza(json);
+    else setInfoSalade(json);
+  };
+
+  useEffect(() => {
+    const csvUrlPizza =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBSEKMC4hHRxoorMUzDwtrIYycwh-iFWJwonyjHO2K3fNenXpGsjQuegaxGNJl_9IstKvnRM-YVKSf/pub?gid=0&single=true&output=csv";
+    fetch(csvUrlPizza)
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Network response was not ok ${response.statusText}`);
+        return response.text();
+      })
+      .then((text) => papa.parse(text, { header: false }))
+      .then((data) => prepareData(data.data, "pizza"))
+      .catch((error) => console.error("Error:", error));
+
+    const csvUrlSalade =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBSEKMC4hHRxoorMUzDwtrIYycwh-iFWJwonyjHO2K3fNenXpGsjQuegaxGNJl_9IstKvnRM-YVKSf/pub?gid=842071051&single=true&output=csv";
+    fetch(csvUrlSalade)
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Network response was not ok ${response.statusText}`);
+        return response.text();
+      })
+      .then((text) => papa.parse(text, { header: false }))
+      .then((data) => prepareData(data.data, "salade"))
+      .catch((error) => console.error("Error:", error));
+  }, []);
+
   return (
     <div className="App">
       <div className="title">
@@ -12,133 +58,14 @@ function App() {
         <div className="primary">
           <h3 className="primaryTitle">Pizzas</h3>
           <div className="primaryPizza">
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Margarita</h4>
-                <p>Sauce tomate, Mozzarella, Basilic</p>
-              </div>
-              <p>18.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Anchois</h4>
-                <p>Sauce tomate, Mozzarella, Anchois, Olive</p>
-              </div>
-              <p>18.50$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Toute garnie</h4>
-                <p>
-                  Sauce tomate, Mozzarella, Champignon, Poivron vert, Peppéroni
-                </p>
-              </div>
-              <p>19.50$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Américaines</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Oignon, Bacon, Jambon Blanc,
-                  Peppéroni
-                </p>
-              </div>
-              <p>21.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">4 Fromages</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Emmental, Parmesan, Chèvre, Bleu,
-                  Olive
-                </p>
-              </div>
-              <p>23.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Reine</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Champignon, Jambon Blanc, Parmesan,
-                  Olive
-                </p>
-              </div>
-              <p>22.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Calzone</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Champignon, Jambon Blanc, Parmesan,
-                  Oeuf
-                </p>
-              </div>
-              <p>22.50$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Végétarienne</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Oignon, Champignon, Poivron Vert,
-                  Artichaut, Olive
-                </p>
-              </div>
-              <p>21.50$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Poulet</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Oignon, Champignon, Poulet,
-                  Parmesan, Olive
-                </p>
-              </div>
-              <p>22.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Chèvre Miel</h4>
-                <p>
-                  Sauce Tomate, Mozzarella, Oignon, Chèvre, Noix, Parmesan,
-                  Olive, Basilic
-                </p>
-              </div>
-              <p>24.00$</p>
-            </div>
-
-            <div className="secondaryPizza">
-              <div>
-                <h4 className="withp">Bambino</h4>
-                <p>
-                  Petite pizza pour enfant ou petite faim ( Toute Garnie ou
-                  Végétarienne )
-                </p>
-              </div>
-              <p>12.00$</p>
-            </div>
-
-            <div className="boisson">
-              <div>
-                <h4 className="nop">Extra</h4>
-              </div>
-              <p>2.50$</p>
-            </div>
-
-            <div className="boisson">
-              <div>
-                <h4 className="nop">Dessert</h4>
-              </div>
-              <p>7.50$</p>
-            </div>
+            {infoPizza.map((pizza) => (
+              <PizzaItem
+                key={pizza.nom}
+                name={pizza.nom}
+                ingredients={pizza.ingredients}
+                price={pizza.prix}
+              />
+            ))}
           </div>
         </div>
         <div className="secondary">
@@ -180,26 +107,14 @@ function App() {
           <div className="secondaryBloc">
             <h3 className="secondaryTitle">Salades</h3>
             <div className="blocSecond salade">
-              <div className="secondaryPizza">
-                <div>
-                  <h4 className="withp">Salade Composée</h4>
-                  <p>
-                    Salade, Champignon, Poivron vert, Oignon, Artichaut, Olive,
-                    Huile d'Olive, Vinaigre Balsamique
-                  </p>
-                </div>
-                <p>13.00$</p>
-              </div>
-              <div className="secondaryPizza">
-                <div>
-                  <h4 className="withp">Salade César</h4>
-                  <p>
-                    Salade, Poulet, Parmesan, Oignon cryspi, Croutons, Sauce
-                    césar faite maison
-                  </p>
-                </div>
-                <p>14.50$</p>
-              </div>
+              {infoSalade.map((salade) => (
+                <PizzaItem
+                  key={salade.nom}
+                  name={salade.nom}
+                  ingredients={salade.ingredients}
+                  price={salade.prix}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -213,7 +128,7 @@ function App() {
               height="375"
               allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
           <div>
