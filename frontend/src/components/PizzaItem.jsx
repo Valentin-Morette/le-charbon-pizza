@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function PizzaItem({ name, ingredients, price }) {
   return (
@@ -11,5 +12,11 @@ function PizzaItem({ name, ingredients, price }) {
     </div>
   );
 }
+
+PizzaItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  ingredients: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+};
 
 export default PizzaItem;
