@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WFWPFP6P");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/x-icon;base64,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" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +29,16 @@
     <link rel="stylesheet" href="https://Valentin-Morette.github.io/le-charbon-pizza/assets/index.8dd4311d.css">
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WFWPFP6P"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     
   </body>
