@@ -1,34 +1,20 @@
-## Concept
+# Pizzeria Le Charbon - Site Web
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+Bienvenue dans le dépôt officiel du site web de la **Pizzeria Le Charbon**. Ce site simple affiche la carte de la pizzeria ainsi que les coordonnées, avec une intégration de Google Maps pour faciliter la navigation.
 
-## Setup & Use
+Le contenu de la carte est stocké sur Google Drive, permettant au propriétaire de la pizzeria de mettre à jour facilement la carte sans avoir besoin de compétences techniques, ni de déployer une base de données ou un backend. Cela en fait un projet léger et facile à maintenir.
 
-### Project Initialization
+## Fonctionnalités
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+- **Affichage de la carte** : Le site récupère directement le contenu de la carte depuis un fichier Google Drive, assurant des mises à jour rapides et faciles sans nécessiter de backend.
+- **Intégration Google Maps** : Les utilisateurs peuvent facilement localiser la Pizzeria Le Charbon grâce à l'intégration de Google Maps.
+- **Design réactif** : Le site est entièrement responsive et s’adapte à divers appareils pour une expérience optimale.
 
-### Available Commands
+## Comment utiliser
 
-- `setup` : Initialization of frontend and backend, as well as all toolings
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+1. Visitez le site [Pizzeria Le Charbon](https://www.pizzeria-le-charbon.com/) pour consulter la carte et obtenir les coordonnées.
+2. Si le lien principal devient inactif (fin d'activité), vous pourrez accéder au site via GitHub Pages ici : [Pizzeria Le Charbon - GitHub Pages](https://valentin-morette.github.io/le-charbon-pizza/).
 
-## FAQ
+## Mise à jour de la carte
 
-### Tools
-
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+Le propriétaire de la pizzeria peut simplement modifier le fichier Google Drive contenant la carte. Une fois les modifications enregistrées, le site affichera automatiquement le contenu mis à jour, sans besoin de redéploiement technique.
